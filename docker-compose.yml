@@ -1,0 +1,53 @@
+version: '3.5'
+
+services:
+  db:
+    image: mysql:8.4
+    restart: always
+    container_name: emtech_db
+    environment:
+      MYSQL_DATABASE: 'emtech_test'
+      MYSQL_USER: 'emtech_user'
+      MYSQL_PASSWORD: 'SFSGNaYxEWqp7NdfPwRT'
+      MYSQL_ROOT_PASSWORD: 'sPOTMw3qvm869ABf6PxO'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    networks:
+      - emtechnetwork
+
+  backend:
+    build:
+      context: ./emtech-backend
+      dockerfile: Dockerfile
+    container_name: emtech_backend
+    ports:
+      - '2000:2000'
+    expose:
+      - '2000'
+    depends_on:
+      - db
+    volumes:
+      - ./emtech-backend:/app
+    networks:
+      - emtechnetwork
+
+  frontend:
+    build:
+      context: ./emtech-frontend
+      dockerfile: Dockerfile
+    container_name: emtech_frontend
+    ports:
+      - '3000:80'
+    expose:
+      - 3000
+    depends_on:
+      - db
+      - backend
+    networks:
+      - emtechnetwork
+
+networks:
+  emtechnetwork:
+    driver: bridge
