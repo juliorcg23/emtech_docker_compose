@@ -1,5 +1,11 @@
 # Es importante clonar las aplicaciones de frontend y backend dentro de este directorio
 
+# Dependencias
+
+Para ejecutar esta aplicación se debe contar con las siguientes dependencias instaladas.
+
+- Docker
+- docker-compose
 
 # Habilitar los archivos de variables de ambiente de cada parte de la aplicación
 
