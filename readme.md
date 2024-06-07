@@ -1,12 +1,10 @@
 # Es importante clonar las aplicaciones de frontend y backend dentro de este directorio
 
 
-# Instalar dependencias de las aplicaciones
-- cd emtech-backend
-- npm install
+# Habilitar los archivos de variables de ambiente de cada parte de la aplicación
 
-- cd emtech-frontend
-- npm install
+- Para el backend renombrar el .env.example a .env
+- Para el frontend renombrar el .env.local.example a .env.local
 
 # Para levantar los contenedores de la aplicación
 docker compose -f "docker-compose.yml" up -d --build
