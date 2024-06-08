@@ -15,9 +15,6 @@ Para ejecutar esta aplicación se debe contar con las siguientes dependencias in
 # Para levantar los contenedores de la aplicación
 docker compose -f "docker-compose.yml" up -d --build
 
-# Para hacer build de la aplicación
-docker-compose run backend npm run build
-
 # Para ejecutar las migraciones
 docker exec emtech_backend npm run typeorm:run
 
