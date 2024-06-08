@@ -29,7 +29,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./emtech-backend:/app
+      - ./emtech_backend:/app
     networks:
       - emtechnetwork
 
