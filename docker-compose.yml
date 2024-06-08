@@ -19,7 +19,7 @@ services:
 
   backend:
     build:
-      context: ./emtech-backend
+      context: ./emtech_backend
       dockerfile: Dockerfile
     container_name: emtech_backend
     ports:
@@ -35,7 +35,7 @@ services:
 
   frontend:
     build:
-      context: ./emtech-frontend
+      context: ./emtech_frontend
       dockerfile: Dockerfile
     container_name: emtech_frontend
     ports:
