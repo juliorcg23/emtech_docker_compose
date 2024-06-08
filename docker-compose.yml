@@ -28,8 +28,6 @@ services:
       - '2000'
     depends_on:
       - db
-    volumes:
-      - ./emtech_backend:/app
     networks:
       - emtechnetwork
 
