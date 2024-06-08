@@ -18,7 +18,6 @@ services:
       - emtechnetwork
 
   backend:
-    command: npm install
     build:
       context: ./emtech_backend
       dockerfile: Dockerfile
@@ -35,7 +34,6 @@ services:
       - emtechnetwork
 
   frontend:
-    command: npm install
     build:
       context: ./emtech_frontend
       dockerfile: Dockerfile
